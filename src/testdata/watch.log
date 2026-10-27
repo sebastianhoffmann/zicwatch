@@ -1,0 +1,142 @@
+Build Summary: 67/67 steps succeeded
+check-tests success
++- install example-tests success
+   +- compile test example-tests debug native success 6s
+      +- compile lib imgui debug native success 19ms
+      +- compile lib physics fast native success 9s
+      +- compile lib geometry fast native success 1s
+      +- compile lib texture-compress fast native success 10ms
+      +- compile lib imgui debug native (reused)
+      +- compile lib physics fast native (reused)
+      +- compile lib geometry fast native (+1 more reused dependencies)
+      +- compile lib texture-compress fast native (reused)
+install success
++- install example success
+|  +- compile exe example debug native success 4s
+|     +- compile lib imgui debug native (reused)
+|     +- compile lib physics fast native (reused)
+|     +- compile lib geometry fast native (+1 more reused dependencies)
+|     +- compile lib imgui debug native (reused)
+|     +- compile lib physics fast native (reused)
+|     +- compile lib geometry fast native (+1 more reused dependencies)
++- install audio-tool success
+|  +- compile exe audio-tool debug native success 635ms
+|     +- compile lib imgui debug native (reused)
+|     +- compile lib imgui debug native (reused)
++- install tool-a success
+|  +- compile exe tool-a debug native success 600ms
+|     +- compile lib imgui debug native (reused)
+|     +- compile lib imgui debug native (reused)
++- install server success
+|  +- compile exe server debug native success 1s
+|     +- compile lib imgui debug native (reused)
+|     +- compile lib imgui debug native (reused)
++- install bake-textures success
+|  +- compile exe bake-textures fast native success 14s
++- install editor success
+|  +- compile exe editor debug native success 1s
+|     +- compile lib imgui debug native (reused)
+|     +- compile lib physics fast native (reused)
+|     +- compile lib geometry fast native (+1 more reused dependencies)
+|     +- compile lib imgui debug native (reused)
+|     +- compile lib physics fast native (reused)
+|     +- compile lib geometry fast native (+1 more reused dependencies)
++- install capture success
+|  +- compile exe capture debug native success 487ms
+|     +- compile lib physics fast native (reused)
+|     +- compile lib physics fast native (reused)
++- install asset-pipeline success
+|  +- compile exe asset-pipeline fast native success 48s
+|     +- compile lib texture-compress fast native success 10ms
+|     +- compile lib texture-compress fast native (reused)
++- install oneoff success
+   +- compile exe oneoff debug native success 1s
+      +- compile lib imgui debug native (reused)
+      +- compile lib physics fast native (reused)
+      +- compile lib geometry fast native (+1 more reused dependencies)
+      +- compile lib imgui debug native (reused)
+      +- compile lib physics fast native (reused)
+      +- compile lib geometry fast native (+1 more reused dependencies)
+
+install
++- install example
+   +- compile exe example debug native 1 errors
+src/main.zig:167:55: error: string literal contains invalid byte: '\n'
+        } else if (std.mem.eql(u8, args[i], "--foo)) {
+                                                      ^
+error: 1 compilation errors
+failed command: zig build-exe -Mroot=src/main.zig --name example -fincremental --listen=-
+
+Build Summary: 64/67 steps succeeded (1 failed)
+install transitive failure
++- install example transitive failure
+   +- compile exe example debug native 1 errors
+
+Build Summary: 67/67 steps succeeded
+install success
++- install example success
+   +- compile exe example debug native success 17ms
+
+Build Summary: 67/67 steps succeeded
+install success
++- install example success
+   +- compile exe example debug native success 19ms
+
+check-tests
++- install example-tests
+   +- compile test example-tests debug native
+      +- compile lib physics fast native 1 errors
+src/physics/collision.zig:10:46: error: expected ',' after parameter
+pub fn f(a: x.A, b: *const y.B, c: []const V f32 {
+                                             ^~~
+error: 1 compilation errors
+failed command: zig build-lib -Mroot=src/physics.zig --name physics -static -fincremental --listen=-
+
+Build Summary: 54/67 steps succeeded (1 failed)
+check-tests transitive failure
++- install example-tests transitive failure
+   +- compile test example-tests debug native transitive failure
+      +- compile lib physics fast native 1 errors
+      +- compile lib physics fast native (reused)
+install transitive failure
++- install example transitive failure
+|  +- compile exe example debug native transitive failure
+|     +- compile lib physics fast native (reused)
+|     +- compile lib physics fast native (reused)
++- install editor transitive failure
+|  +- compile exe editor debug native transitive failure
+|     +- compile lib physics fast native (reused)
+|     +- compile lib physics fast native (reused)
++- install capture transitive failure
+|  +- compile exe capture debug native transitive failure
+|     +- compile lib physics fast native (reused)
+|     +- compile lib physics fast native (reused)
++- install oneoff transitive failure
+   +- compile exe oneoff debug native transitive failure
+      +- compile lib physics fast native (reused)
+      +- compile lib physics fast native (reused)
+
+Build Summary: 67/67 steps succeeded
+check-tests success
++- install example-tests success
+   +- compile test example-tests debug native success 50ms
+      +- compile lib physics fast native success 9s
+      +- compile lib physics fast native (reused)
+install success
++- install example success
+|  +- compile exe example debug native success 21ms
+|     +- compile lib physics fast native (reused)
+|     +- compile lib physics fast native (reused)
++- install editor success
+|  +- compile exe editor debug native success 34ms
+|     +- compile lib physics fast native (reused)
+|     +- compile lib physics fast native (reused)
++- install capture success
+|  +- compile exe capture debug native success 8ms
+|     +- compile lib physics fast native (reused)
+|     +- compile lib physics fast native (reused)
++- install oneoff success
+   +- compile exe oneoff debug native success 27ms
+      +- compile lib physics fast native (reused)
+      +- compile lib physics fast native (reused)
+
